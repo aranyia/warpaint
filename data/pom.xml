@@ -13,6 +13,8 @@
 
     <artifactId>warpaint-data</artifactId>
 
+    <name>Warpaint - Data Repositories</name>
+
     <dependencies>
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
@@ -22,7 +24,6 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

@@ -12,7 +12,23 @@
 
     <artifactId>warpaint-app</artifactId>
 
+    <name>Warpaint - Application</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
+        <dependency>
+            <groupId>org.aranyia.warpaint.api</groupId>
+            <artifactId>warpaint-api-spring</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.aranyia.warpaint</groupId>
             <artifactId>warpaint-data</artifactId>

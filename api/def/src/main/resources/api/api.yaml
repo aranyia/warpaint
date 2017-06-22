@@ -1,0 +1,58 @@
+swagger: '2.0'
+info:
+  title: Warpaint API
+  description: Definition of Warpaint interfaces
+  version: 1.0.0
+schemes:
+  - http
+  - https
+basePath: /
+
+paths:
+  /price/months:
+    get:
+      summary: List of prices by months
+      description: Returns the list of prices at the last date of each month.
+      tags:
+      - Price
+      operationId: prices
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Price list on success
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Price'
+        '400':
+          description: Bad request
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        '500':
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+
+definitions:
+  Price:
+    type: object
+    properties:
+      date:
+        description: The date of the price record, in the format 'MM-dd-YYYY'
+        type: string
+      close:
+        description: The closing price on the date
+        type: number
+        format: double
+
+  ErrorResponse:
+    type: object
+    properties:
+      status:
+        description: The HTTP status code of the response
+        type: integer
+        format: int32
+      message:
+        description: Error message
+        type: string

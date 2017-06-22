@@ -5,20 +5,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
+        <artifactId>warpaint-api</artifactId>
         <groupId>org.aranyia.warpaint</groupId>
-        <artifactId>warpaint-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>warpaint-api</artifactId>
+    <groupId>org.aranyia.warpaint.api</groupId>
+    <artifactId>warpaint-api-def</artifactId>
 
-    <packaging>pom</packaging>
-
-    <name>Warpaint - API</name>
-
-    <modules>
-        <module>def</module>
-        <module>spring</module>
-    </modules>
+    <name>Warpaint - API - Definition</name>
 
 </project>

@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonPropertyOrder({"Date", "Open", "High", "Low", "Close", "Adj Close", "Volume"})
-public class CsvPriceRecord {
+public final class CsvPriceRecord {
 
     @JsonProperty("Date")
     public String date;
